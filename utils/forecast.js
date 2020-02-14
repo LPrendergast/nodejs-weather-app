@@ -1,9 +1,8 @@
 const request = require("request");
 const key = require("../config.js");
-const dotenv = require("dotenv").config();
 
 const weatherKey = key.SECRET_KEY;
-const herokuKey = dotenv.parsed.herokuKey;
+const herokuKey = key.HEROKU_KEY;
 
 const forecast = (latitude, longitude, callback) => {
   const forecastUrl = `https://api.darksky.net/forecast/${weatherKey ||
@@ -26,6 +25,3 @@ const forecast = (latitude, longitude, callback) => {
 };
 
 module.exports = forecast;
-
-// herokuKey=9f5c971a80f9dfda8376041adbf31b26
-// mapKey=pk.eyJ1IjoibHVrZXByZW4iLCJhIjoiY2s2aThtaXpsMWh6dDNrbnZoZXZtcWp6ZSJ9.3MOrLmfaJ3R9PadVuPgV-A

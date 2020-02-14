@@ -1,6 +1,7 @@
 const request = require("request");
-const dotenv = require("dotenv").config();
-const mapKey = dotenv.parsed.mapKey;
+const key = require("../config.js");
+
+const mapKey = key.MAP_KEY;
 
 const geocode = (address, callback) => {
   const mapUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
