@@ -26,3 +26,6 @@ const forecast = (latitude, longitude, callback) => {
 };
 
 module.exports = forecast;
+
+// herokuKey=9f5c971a80f9dfda8376041adbf31b26
+// mapKey=pk.eyJ1IjoibHVrZXByZW4iLCJhIjoiY2s2aThtaXpsMWh6dDNrbnZoZXZtcWp6ZSJ9.3MOrLmfaJ3R9PadVuPgV-A
